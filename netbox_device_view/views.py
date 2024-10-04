@@ -40,7 +40,7 @@ class DeviceDeviceView(generic.ObjectView):
     def get_extra_context(self, request, instance):
         dv, modules, ports_chassis = prepare(instance)
         height = (
-            instance.device_type.u_height * 2 * 50 + instance.device_type.u_height * 2
+            instance.device_type.u_height * 2 * 30 + instance.device_type.u_height * 2
         )
         return {
             "device_view": models.DeviceView.objects.filter(
