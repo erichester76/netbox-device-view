@@ -1,10 +1,9 @@
 .deviceview {
 	box-sizing: border-box;
 	display: grid;
-	grid-auto-columns: calc(4%);
-	grid-auto-rows: auto;
-	grid-gap: 2px;
-	grid-auto-flow: column;
+	grid-template-columns: repeat(26, 1fr); /* Set up 26 equal columns */
+	grid-auto-rows: 1fr; /* Keep rows auto-sized for squares */
+	gap: calc(1%); /* Calculate gap dynamically based on the width */
 	border: 1px solid gray;
 	border-radius: 5px;
 	padding: 5px;
