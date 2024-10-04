@@ -3,7 +3,7 @@
 	display: grid;
 	grid-template-columns: repeat(26, 1fr); /* Set up 26 equal columns (for 52 ports) */
 	grid-auto-rows: 1fr;
-	grid-gap: calc(1%); /* Space between grid items */
+	grid-gap: 1px; /* Space between grid items */
 	border: 1px solid gray;
 	border-radius: 5px;
 	padding: 5px;
