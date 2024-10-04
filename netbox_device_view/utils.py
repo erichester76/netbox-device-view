@@ -10,17 +10,7 @@ def process_interfaces(interfaces, ports_chassis, dev):
         for itf in interfaces:
             if itf.type == "virtual" or itf.type == "lag":
                 continue
-            regex = r"^(?P<type>([a-zA-Z\-_]*))(\/|(?P<dev>[0-9]+).|\s)?((?P<module>[0-9]+).|\s)?((?P<port>[0-9]+))$"
-            matches = re.search(regex, itf.name.lower())
-            if matches:
-                itf.stylename = (
-                    (matches["type"] or "")
-                    + (matches["module"] or "")
-                    + "-"
-                    + matches["port"]
-                )
-            else:
-                itf.stylename = re.sub(r"[^.a-zA-Z\d]", "-", itf.name.lower())
+            itf.stylename = re.sub(r"[^.a-zA-Z\d]", "-", itf.name.lower())
             if itf.stylename.isdigit():
                 itf.stylename = f"p{itf.stylename}"
             if dev not in ports_chassis:
