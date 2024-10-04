@@ -2,16 +2,22 @@
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: repeat(26, 1fr); /* Set up 26 equal columns */
-	grid-auto-rows: 1fr; /* Let the rows auto-size to maintain square ratio */
+	grid-auto-rows: 1fr; /* Ensure rows maintain the same aspect ratio as the columns */
 	gap: 5px; /* Space between grid items */
 	border: 1px solid gray;
 	border-radius: 5px;
 	padding: 10px;
-	width: 100%; /* Full container width */
+	width: 100%; /* Make the container responsive */
 	max-width: 100%; /* Prevent overflow */
 	margin: auto;
 	overflow: hidden;
-	min-height: 0; /* Allow container to grow based on content */
+}
+
+.deviceview.area {
+	background-color: #000000;
+	grid-template-areas: 
+		"ethernet1 ethernet3 ethernet5 ethernet7 ethernet9 ethernet11 ethernet13 ethernet15 ethernet17 ethernet19 ethernet21 ethernet23 ethernet25 ethernet27 ethernet29 ethernet31 ethernet33 ethernet35 ethernet37 ethernet39 ethernet41 ethernet43 ethernet45 ethernet47 ethernet49 ethernet51"
+		"ethernet2 ethernet4 ethernet6 ethernet8 ethernet10 ethernet12 ethernet14 ethernet16 ethernet18 ethernet20 ethernet22 ethernet24 ethernet26 ethernet28 ethernet30 ethernet32 ethernet34 ethernet36 ethernet38 ethernet40 ethernet42 ethernet44 ethernet46 ethernet48 ethernet50 ethernet52";
 }
 
 .deviceview a {
@@ -41,4 +47,27 @@
 	background: repeating-linear-gradient(
 		-45deg,
 		grey,
-		grey 
+		grey 5px,
+		black 5px,
+		black 10px
+	);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+	.deviceview {
+		grid-template-columns: repeat(13, 1fr); /* Reduce to 13 columns */
+	}
+}
+
+@media (max-width: 600px) {
+	.deviceview {
+		grid-template-columns: repeat(8, 1fr); /* Reduce to 8 columns for smaller screens */
+	}
+}
+
+@media (max-width: 400px) {
+	.deviceview {
+		grid-template-columns: repeat(6, 1fr); /* Reduce to 6 columns for very small screens */
+	}
+}
