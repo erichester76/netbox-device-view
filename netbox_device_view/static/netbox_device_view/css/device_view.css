@@ -1,7 +1,7 @@
 .deviceview {
 	box-sizing: border-box;
 	display: grid;
-	grid-template-columns: repeat(30, 1fr); /* Set up 26 equal columns (for 52 ports) */
+	grid-template-columns: repeat(26, 1fr); /* Set up 26 equal columns (for 52 ports) */
 	grid-auto-rows: 1fr;
 	grid-gap: calc(1%); /* Space between grid items */
 	border: 1px solid gray;
