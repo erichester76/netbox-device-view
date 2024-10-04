@@ -11,7 +11,7 @@ class Ports(PluginTemplateExtension):
 
         dv, modules, ports_chassis = prepare(obj)
 
-        height = obj.device_type.u_height * 2 * 20 + obj.device_type.u_height * 2
+        height = obj.device_type.u_height * 2 * 30 + obj.device_type.u_height * 2
 
         if dv is None or modules is None or ports_chassis is None:
             return ""
