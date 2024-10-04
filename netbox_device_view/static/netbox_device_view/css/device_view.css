@@ -3,12 +3,12 @@
 	display: grid;
 	grid-template-columns: repeat(26, 1fr); /* Set up 26 equal columns (for 52 ports) */
 	grid-auto-rows: 1fr;
-	grid-gap: 5px; /* Space between grid items */
+	grid-gap: 52x; /* Space between grid items */
 	border: 1px solid gray;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 5px;
 	width: 100%; /* Make the container responsive */
-	max-width: 100%; /* Prevent overflow */
+	max-width: 95%; /* Prevent overflow */
 	margin: auto;
 	overflow: hidden;
 }
